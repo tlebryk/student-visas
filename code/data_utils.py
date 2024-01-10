@@ -38,3 +38,6 @@ def aggregate_and_save(
 ):
     df = read_yelp_responses(raw_dir)
     df.to_csv(f"{agg_dir}/{filename}")
+
+# os get environment variable 
+# os.getenv("YELP_API_KEY")

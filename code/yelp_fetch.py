@@ -11,10 +11,12 @@ import data_utils
 
 # %%
 # globals
+# TODO: token rotation?
+YELP_API_KEY = os.getenv("YELP_API_KEY")
 HEADERS = {
     "accept": "application/json",
     # TODO: remove hardcoded environment variable
-    "Authorization": "Bearer i9tXrN9wOtM9pRRl9xO9eiUjgN01mfSKIelJ9NhFrmFJ-lc8cDZuFZrQO_QF5d8jvZ5EYTri4ZrTelZ0sOZHJ7zLIpB8Bb1KE8iKtKTaCB3aYlulmqVIwqSva-iOZXYx",
+    "Authorization": f"Bearer {YELP_API_KEY}",
 }
 
 
@@ -117,7 +119,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--start_index", type=int)
     args = parser.parse_args()
-    main(args.start_index)
+    # main(args.start_index)
 
 # next steps: run for as long as we have tokens (let's do 300 today and then 500 every day over the weekend)
 # we'll iteratively save and then have code to read the batches. Maybe have a note for where things start and stop

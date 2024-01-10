@@ -8,10 +8,11 @@ import argparse
 import data_utils
 import argparse
 
+YELP_API_KEY = os.getenv("YELP_API_KEY")
 HEADERS = {
     "accept": "application/json",
     # TODO: remove hardcoded environment variable
-    "Authorization": "Bearer i9tXrN9wOtM9pRRl9xO9eiUjgN01mfSKIelJ9NhFrmFJ-lc8cDZuFZrQO_QF5d8jvZ5EYTri4ZrTelZ0sOZHJ7zLIpB8Bb1KE8iKtKTaCB3aYlulmqVIwqSva-iOZXYx",
+    "Authorization": f"Bearer {YELP_API_KEY}",
 }
 
 
