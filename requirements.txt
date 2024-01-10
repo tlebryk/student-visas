@@ -1,0 +1,5 @@
+ipykernel==6.28.0
+pandas==2.1.4
+pip-chill==1.0.3
+requests==2.31.0
+thefuzz==0.20.0
